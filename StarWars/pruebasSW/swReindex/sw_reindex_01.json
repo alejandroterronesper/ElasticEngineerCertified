@@ -1,0 +1,11 @@
+{
+    "source":{ //indice antiguo
+        "index": "starwars_index_human"
+    },
+    "dest":{ //nuevo indice
+        "index": "temp_sw_index"
+    },
+    "script": { //borramos la columna species
+        "source": "ctx._source.remove('species')"
+    }
+}

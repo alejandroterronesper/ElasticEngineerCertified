@@ -1,0 +1,27 @@
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "custom_analyzer_films": {
+                    "type": "custom",
+                    "tokenizer": "comma_tokenizer", //token filter por coma
+                    "filter": ["uppercase"] //pasamos a mayúsculas
+                }
+            },
+                "tokenizer": {
+                    "comma_tokenizer": {
+                        "type": "pattern",
+                        "pattern": ",\\s*"
+                    }
+                }
+        }
+    },    
+    "mappings":{
+        "properties":{
+            "films": {
+                "type": "text",
+                "analyzer": "custom_analyzer_films" //custom analyzer
+            }
+        }
+    }
+}

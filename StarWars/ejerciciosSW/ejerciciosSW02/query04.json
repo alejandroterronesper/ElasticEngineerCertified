@@ -1,0 +1,25 @@
+// 4. Listar los personajes que pertenecen a la especie "Droid" 
+// y que han aparecido en las películas de 
+// la trilogía original (episodios IV, V y VI).
+
+
+{
+    "query": {
+        "bool":{
+            "must": [
+                {"term": {"species" : "Droid"}},
+                {"match": {"films" : " hope empire return"}}
+            ]
+        }
+    }
+
+    ,
+      "fields": [
+        "name",
+        "mass",
+        "hair_color",
+        "skin_color",
+        "films"
+    ],
+    "_source": false
+}

@@ -1,0 +1,30 @@
+// top 3 de razas mas altas por media
+
+// primero agrupo por razas
+// luego calculo avg altura
+// luego saco sort del campo avg altura
+// y saco size 3
+
+
+{
+    "aggs":{
+        "agg_species":{
+            "terms":{
+                "field":"species",
+                "order": {"avg_height": "desc"},
+                "size": 3
+            },
+            "aggs":{
+                "avg_height":{
+                    "avg":{
+                        "field":"height"
+                    }
+                }
+            }
+        }
+    },
+    "_source": false,
+    "size": 0
+    
+    
+}

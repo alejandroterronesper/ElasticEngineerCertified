@@ -1,0 +1,23 @@
+// 5. Buscar personajes humanos que no 
+// hayan aparecido en "The Phantom Menace".
+
+{
+    "query": {
+        "bool": {
+            "must":[
+                {"term": {"species": "Human"}}
+            ],
+            "must_not":[
+                {"match": {"films": "menace"}}
+            ]
+        }
+    }
+        ,
+      "fields": [
+        "name",
+        "films",
+        "species"
+    ],
+    "_source": false
+}
+

@@ -1,0 +1,30 @@
+// Encontrar personajes con una masa mayor a 80 y que tengan el color de cabello
+// "Brown", pero excluir aquellos cuyo color de piel sea "Dark"
+
+
+{
+    "query": {
+        "bool": {
+            "must": [
+                {"term": {"hair_color": "brown"}}
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "mass": {"gt": 80}
+                    }
+                }
+            ],
+            "must_not": [
+                {"term": {"skin_color": "dark"}}
+            ]
+        }
+    },
+        "fields": [
+        "name",
+        "mass",
+        "hair_color",
+        "skin_color"
+    ],
+    "_source": false
+}

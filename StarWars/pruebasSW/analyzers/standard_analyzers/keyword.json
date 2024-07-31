@@ -1,0 +1,4 @@
+{
+    "analyzer" : "keyword", 
+    "text" : "Eternal sunshine of the spotless mind ... ¡Olvidate de mí!" //la cadena la toma como un keyword
+}

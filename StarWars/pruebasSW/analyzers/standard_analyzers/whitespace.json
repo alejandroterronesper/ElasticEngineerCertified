@@ -1,0 +1,4 @@
+{
+    "analyzer" :"whitespace",
+    "text" :" holaAmigo   esto esun espacio en blanco7887 78 , , , , " //divie en función de espacio en blanco
+}

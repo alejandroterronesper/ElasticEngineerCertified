@@ -1,0 +1,22 @@
+{
+    "aggs":{
+        "agg_species":{
+            "terms":{
+                "field":"species",
+                "order": {"avg_height": "desc"},
+                "size": 3
+            },
+            "aggs":{
+                "avg_height":{
+                    "avg":{
+                        "field":"height"
+                    }
+                }
+            }
+        }
+    },
+    "_source": false,
+    "size": 0
+    
+    
+}

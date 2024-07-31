@@ -1,0 +1,12 @@
+//consulta que me permite obtener los source mas los fields a la vez
+//tenemos los campos del mapping y el runtimefield añadido después
+
+{
+    "query": {
+        "match_all" : {}
+
+    },
+    "fields": ["*"],
+    "_source": false
+
+}

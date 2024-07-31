@@ -1,0 +1,27 @@
+// calcular media de alturas
+// agrupadas por genero
+{
+    "aggs": {
+        "group_planetas": {
+            "terms": {
+                "field": "homeworld"
+            },
+            "aggs":{
+                "group_species":{
+                    "terms":{
+                        "field": "species"
+                    },
+                    "aggs":{
+                        "avg_height":{
+                            "avg":{
+                                "field": "height"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "_source": false,
+    "size": 0
+}

@@ -1,0 +1,8 @@
+{
+    "source": {
+      "index": "index_starwars"
+    },
+    "dest": {
+      "index": "index_starwars_custom_films"
+    }
+  }

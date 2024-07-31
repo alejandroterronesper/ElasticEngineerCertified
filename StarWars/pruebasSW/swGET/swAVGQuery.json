@@ -1,0 +1,20 @@
+{
+    "query": {
+       "term": {
+           "homeworld" : "Tatooine"
+       }
+   },
+   "aggs": {
+       "nombre_respuesta": {
+           "avg": {
+               "field": "height"
+               //,
+               // "script":"BigDecimal.valueOf(_value).setScale(2, RoundingMode.HALF_UP)",
+               // "missing":0
+
+           }
+       }
+   },
+       "_source": false
+
+}

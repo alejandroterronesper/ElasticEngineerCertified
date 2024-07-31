@@ -1,0 +1,9 @@
+{
+    "script": {
+      "source": "ctx._source.remove('camp');",
+      "lang": "painless"
+    },
+    "query": {
+      "match_all": {}
+    }
+  }

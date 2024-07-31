@@ -1,0 +1,18 @@
+// 6. Contar el número de personajes por cada
+// planeta de origen y filtrar aquellos 
+// planetas con más de 5 personajes.
+{
+    "query": {
+        "match_all": {}
+    },
+    "aggs": {
+        "agg_homeworld": {
+            "terms": {
+                "field": "homeworld",
+                "order": {"_count" :"desc"},
+                "size": 5
+            }
+        }
+    },
+    "_source": false
+}

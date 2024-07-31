@@ -1,0 +1,11 @@
+{
+    "query": {
+        "match_all" : {}
+    },
+    "sort" : [ // se le pasan varios parámetros por llaves
+        {"mass": {"order": "desc"}},
+        {"height": {"order": "asc"}}
+    ],
+    "size": 10
+
+}

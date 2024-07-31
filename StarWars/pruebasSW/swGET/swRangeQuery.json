@@ -1,0 +1,11 @@
+{
+    "query": {
+        "range": {
+                "birth_year": {
+                    "gte": 19, // mayor o igual
+                    "lte" : 33  // menor o igual
+                }
+        }
+    }
+
+}

@@ -1,0 +1,24 @@
+// 6. Obtener personajes con el género "Male" que tengan el color de piel "Light" y que
+// no aparezcan en la película "Return of the Jedi".
+
+
+{
+    "query": {
+        "bool": {
+            "must": [
+                {"term": {"gender": "masculine"}},
+                {"term": {"skin_color": "light"}}
+            ],
+            "must_not" : [
+                {"match": {"films": "Return"}}
+            ]
+        }
+    },
+        "fields": [
+        "name",
+        "gender",
+        "skin_color",
+        "films"
+    ],
+    "_source": false
+}

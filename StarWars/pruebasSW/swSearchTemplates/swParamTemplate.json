@@ -1,0 +1,10 @@
+{
+    "id": "sw_search_template",
+    "params": {
+      "homeworld_string": "Naboo",
+      "gte_string": 10,
+      "lte_string": 100,
+      "from": 0,
+      "size": 3
+    }
+  }

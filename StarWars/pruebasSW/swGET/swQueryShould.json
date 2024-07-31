@@ -1,0 +1,11 @@
+{
+    "query": {
+        "bool": {
+            "should": [
+                {"match": {"films": "sith"} },
+                {"term":{"homeworld" : "Tatooine"}} 
+            ]
+        }
+    }
+
+}

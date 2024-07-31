@@ -1,0 +1,9 @@
+{
+    "size": 30,
+    "query": {
+        "wildcard": {
+            "name": "*a"     //contenido
+        }
+    }
+
+}

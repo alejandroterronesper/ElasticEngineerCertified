@@ -1,0 +1,23 @@
+// 8. Listar los personajes que tienen
+// una altura mayor al promedio de su especie.
+{
+    "query": {
+        "match_all": {}
+    },
+    
+    "aggs": {
+        "agg_species": {
+            "terms": {
+                "field": "species"
+                
+            },
+            "aggs": {
+                "avg_height": {
+                    "avg": {
+                        "field": "height"
+                    }
+                }
+            }
+        }
+    }
+}

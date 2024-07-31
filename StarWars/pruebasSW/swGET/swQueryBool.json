@@ -1,0 +1,20 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {"match": {"films": "sith"} },
+                {"term":{"homeworld" : "Tatooine"}} 
+            ]
+        }
+    }
+
+}
+
+// hay cuatro tipo de busquedas
+// 1 - equivalente a un AND --> MUST 
+// 2 - equivalente a un OR --> SHOULD 
+// 3 - MUST NOT --> no me incluyas esta busqueda
+// 4 - filter --> es como el MUST, que no tiene en cuenta el SCORE
+// score  valor interno de elastic, se que se la asigna a un documento
+// en funcion de cuantas veces una query hace match sobre un documento
+// cuando ahces una busqueda, elastic entiende que a mayor score

@@ -1,0 +1,19 @@
+{
+    "query": {
+        "match_all": {
+           
+        }
+    },
+       "aggs": {
+        "nombre_respuesta": {
+            "terms": {
+                "field": "homeworld"
+                
+
+            }
+        }
+    },
+    "_source": false
+
+
+}

@@ -1,0 +1,52 @@
+{
+    "settings": {
+        "number_of_replicas": 0,
+        "number_of_shards": 1
+    },
+    "mappings": {
+        "properties": {
+            "birth_year": {
+                "type": "double"
+                },
+            "eye_color": {
+                "type": "keyword"
+            },
+            "films": {
+                "type": "text"
+            },
+            "gender": {
+                "type": "keyword"
+            },
+            "hair_color": {
+                "type": "keyword"
+            },
+            "height": {
+                "type": "double"
+            },
+            "homeworld": {
+                "type": "keyword"
+            },
+            "mass": {
+                "type": "double"
+            },
+            "name": {
+                "type": "keyword"
+            },
+            "sex": {
+                "type": "keyword"
+            },
+            "skin_color": {
+                "type": "keyword"
+            },
+            "species": {
+                "type": "keyword"
+            },
+            "starships": {
+                "type": "text"
+            },
+            "vehicles": {
+                "type": "keyword"
+            }
+        }
+    }
+}

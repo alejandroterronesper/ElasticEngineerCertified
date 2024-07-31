@@ -1,0 +1,4 @@
+{
+    "analyzer": "standard",
+    "text": "esto es es el 2.14 :) = ?¿ ." //no coge signos o caracteres de puntuación
+}

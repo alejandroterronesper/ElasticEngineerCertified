@@ -1,0 +1,34 @@
+// Encontrar personajes cuyo nombre contenga la palabra "Skywalker" y que hayan
+// aparecido en más de tres películas, excluyendo aquellos que tienen "Droid"
+// como especie.
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "wildcard": { //para buscar que contengan palabras en kw
+                        "name": "*Skywalker" // "query_string": { "default_field": "name",  "query": "*Skywalker" }
+                    }
+                },
+                {
+                    "match": {"films": "force"} 
+
+                }
+            ],
+            "must_not": [
+                {
+                    "term": {
+                        "species": "Droid"
+                    }
+                }
+            ]
+        }
+    },
+    "fields": [
+        "name",
+        "homeworld",
+        "films",
+        "species"
+    ],
+    "_source": false
+}

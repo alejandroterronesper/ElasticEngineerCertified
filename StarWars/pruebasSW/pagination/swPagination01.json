@@ -1,0 +1,22 @@
+{
+    // por defecto se cogen 10 
+    "from": 0,
+    "size": 2,
+    "query": {
+        "match": {
+            "films": "the"
+        }
+    },
+    "sort": [
+        {
+            "mass": {
+                "order": "desc"
+            }
+        },
+        {
+            "height": {
+                "order": "asc"
+            }
+        }
+    ]
+}

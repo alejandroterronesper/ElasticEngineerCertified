@@ -1,0 +1,22 @@
+{
+
+    "from": 7, 
+    "size": 4,
+    "query": {
+        "match": {
+            "films": "the"
+        }
+    },
+    "sort": [
+        {
+            "mass": {
+                "order": "desc"
+            }
+        },
+        {
+            "height": {
+                "order": "asc"
+            }
+        }
+    ]
+}

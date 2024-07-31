@@ -1,0 +1,38 @@
+// Obtener personajes que hayan nacido en un año mayor a 50 BBY y que tengan una
+// altura mayor a 180, pero excluir aquellos personajes cuya altura sea exactamente
+// 188.
+{
+    "query": {
+        "bool": {
+            "filter": [
+                {
+                    "range": {
+                        "birth_year": {
+                            "gt": 50
+                        }
+                    }
+                },
+                {
+                    "range":{
+                        "height": {
+                            "gt": 180
+                        }
+                    }
+                }
+            ],
+            "must_not":[
+                {
+                    "match": {
+                        "height": 188
+                    }
+                }
+            ]
+        }
+    },
+    "fields": [
+        "name",
+        "birth_year",
+        "height"
+    ],
+    "_source": false
+}

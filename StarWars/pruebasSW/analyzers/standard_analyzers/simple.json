@@ -1,0 +1,4 @@
+{
+    "analyzer": "simple",
+    "text" :"CMD, DC" //solo coge palabras
+}

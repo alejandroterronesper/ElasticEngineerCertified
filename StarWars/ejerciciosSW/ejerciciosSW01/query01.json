@@ -1,0 +1,24 @@
+// Buscar personajes que hayan aparecido en
+//  la película "The Empire Strikes Back"
+// y que pertenezcan a la especie "Human",
+// pero que no tengan como planeta de
+// origen "Tatooine".
+{
+    "query": {
+        "bool": {
+            "must": [
+                {"match": {"films": "Empire"} },
+                {"term":{"species" : "Human"}} 
+            ],
+            "must_not": [
+                {"term": {"homeworld": "Tatooine"}}
+            ]
+        }
+        
+    },
+    "fields":["name", "homeworld", "films", "species"],
+    "_source": false
+    
+
+}
+

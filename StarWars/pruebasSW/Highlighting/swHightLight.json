@@ -1,0 +1,13 @@
+{
+    "query" : {
+        "match": {"films": "the"}
+    },
+     "highlight": {
+    "fields": {
+      "films": {//indicamos las etiquetas con que vamos a resaltar
+          "pre_tags": ["<b>"],  
+        "post_tags": ["</b>"]
+      }
+    }
+  }
+}

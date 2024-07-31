@@ -1,0 +1,8 @@
+{
+    "source":{ //indice antiguo
+        "index": "temp_sw_index"
+    },
+    "dest":{ //nuevo indice
+        "index": "starwars_index_human"
+    }
+}

@@ -1,0 +1,4 @@
+{
+    "analyzer": "stop",
+    "text" :"stop words the this la los" //solo funciona con palabras en ingles
+}

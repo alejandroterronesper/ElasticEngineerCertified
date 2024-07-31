@@ -1,0 +1,16 @@
+{
+    "query": {
+        "match_all": {}
+    },
+    "fields": [
+        "calculated_field"
+    ],
+    "runtime_mappings": {
+        "calculated_field": {
+            "type": "double",
+            "script": {
+                "source": "if (doc['mass'].size() != 0 && doc['height'].size() != 0) { emit((doc['mass'].value * doc['height'].value) / 100); } else { emit(0); }"
+            }
+        }
+    }
+}

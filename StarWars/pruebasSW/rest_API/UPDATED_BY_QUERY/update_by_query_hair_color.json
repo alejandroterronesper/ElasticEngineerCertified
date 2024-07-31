@@ -1,0 +1,9 @@
+{
+    "script": {
+      "source": " ctx._source.camp = 'color de pelazo' ",
+      "lang": "painless"
+    },
+    "query": {
+      "match_all": {}
+    }
+  }

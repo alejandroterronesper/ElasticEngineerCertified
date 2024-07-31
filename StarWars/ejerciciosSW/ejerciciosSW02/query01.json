@@ -1,0 +1,20 @@
+// 1. Contar el número de personajes por cada especie.
+
+
+{
+    "query": {
+        "match_all": {
+           
+        }
+    },
+       "aggs": {
+        "agg_species": {
+            "terms": {
+                "field": "species"
+            }
+        }
+    },
+    "_source": false
+
+
+}

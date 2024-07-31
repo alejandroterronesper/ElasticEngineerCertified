@@ -1,0 +1,11 @@
+{
+    "query": {
+        "range": {
+                "mass": {
+                    "gt": 20, // mayor que
+                    "lt" : 68  // menor que
+                }
+        }
+    }
+
+}

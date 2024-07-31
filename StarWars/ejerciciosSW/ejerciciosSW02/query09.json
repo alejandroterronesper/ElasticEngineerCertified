@@ -1,0 +1,29 @@
+// 9. Encontrar los personajes que han aparecido en la película "Revenge of the Sith"
+// pero no en "Attack of the Clones"
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "films": "Sith"
+                    }
+                }
+            ],
+            "must_not": [
+                {
+                    "match": {
+                        "films": "Clones"
+                    }
+                }
+            ]
+        }
+    },
+    "fields": [
+        "name",
+        "homeworld",
+        "films",
+        "species"
+    ],
+    "_source": false
+}

@@ -1,0 +1,53 @@
+{
+    "index_patterns": ["starwars_index*"],
+    "template": {
+        "settings": {
+            "index.default_pipeline" : "sw_human_pipeline", //referencia del pipeline
+              "number_of_shards": 1,
+                "number_of_replicas": 0
+        },
+        "mappings" :{
+            "properties": {
+                    "films": {
+                    "type": "text"
+                    },
+                    "homeworld": {
+                    "type": "keyword"
+                    },
+                    "gender": {
+                    "type": "keyword"
+                    },
+                    "skin_color": {
+                    "type": "keyword"
+                    },
+                    "mass": {
+                    "type": "double"
+                    },
+                    "sex": {
+                    "type": "keyword"
+                    },
+                    "vehicles": {
+                    "type": "keyword"
+                    },
+                    "birth_year": {
+                    "type": "double"
+                    },
+                    "hair_color": {
+                    "type": "keyword"
+                    },
+                    "eye_color": {
+                    "type": "keyword"
+                    },
+                    "starships": {
+                    "type": "text"
+                    },
+                    "name": {
+                    "type": "keyword"
+                    },
+                    "height": {
+                    "type": "double"
+                    }
+                }
+        }
+    }
+}

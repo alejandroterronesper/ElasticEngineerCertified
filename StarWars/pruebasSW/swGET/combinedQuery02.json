@@ -1,0 +1,20 @@
+// calcular media de alturas
+// agrupadas por genero
+{
+    "aggs": {
+        "group_sex": {
+            "terms": {
+                "field": "sex"
+            }
+        },
+        "aggs": {
+       
+                "avg": {
+                    "field": "height"
+
+            }
+        }
+    },
+    "_source": false,
+    "size": 0
+}

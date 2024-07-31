@@ -1,0 +1,26 @@
+{
+    //campos calculados
+    "runtime_mappings" : { //solo existen en esta query
+        "indice_masa_corporal": {
+            "type" : "double",
+            "script" : { //painless
+                "source" : "if (doc['mass'].size() > 0 && doc['height'].size() > 0) {double masa = doc['mass'].value;double altura = doc['height'].value; if (altura != 0) { emit((masa * 10000) / (altura * altura)); } }"
+            }
+        }
+    },
+    //query de búsqueda del campo en tiempo de ejecución
+    "query": {
+        "bool":{
+            "must": [
+                {"range": {"indice_masa_corporal": {"gte": 15}}}
+            ]
+        }
+    },
+    "sort" : [
+        {"indice_masa_corporal": {"order": "desc"}}
+    ],
+    "size": 5,
+    "_source": false,
+    "fields": ["name", "height", "mass", "indice_masa_corporal"]
+
+}

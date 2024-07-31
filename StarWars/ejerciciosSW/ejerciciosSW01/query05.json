@@ -1,0 +1,18 @@
+// Encontrar personajes cuyo planeta de origen sea "Naboo" y que tengan la especie
+// "Gungan", pero que no hayan aparecido en la película "The Phantom Menace".
+
+{
+    "query": {
+        "bool": {
+            "must": [
+                {"term": {"homeworld": "Naboo"}},
+                {"term":  {"species": "Gungan"}}
+            ],
+            "must_not": [
+                {"match": {"films": "Phantom"}}
+            ]
+        }
+    },
+    "fields":["name", "homeworld", "films", "species"],
+    "_source": false
+}

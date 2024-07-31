@@ -1,0 +1,27 @@
+// 10.Buscar personajes con más de 3 apariciones en películas que tengan el color de
+// cabello "Black" y el color de ojos "Brown", pero excluir aquellos que tienen como
+// planeta de origen "Coruscant".
+
+
+{
+    "query": {
+        "bool":{
+            "must": [
+                {"term": {"hair_color" :"black"}},
+                {"term": {"eye_color": "brown"}}
+            ],
+            "must_not": [
+                {"term": {"homeworld": "Coruscant"}}
+            ]
+        }
+    }
+          ,
+        "fields": [
+        "name",
+        "hair_color",
+        "homeworld",
+        "eye_color"
+    ],
+    "_source": false
+    
+}

@@ -1,0 +1,9 @@
+{
+    "query": {
+        "match": {
+            "mass" : 77
+        }
+    },
+    "_source": false,
+    "fields" :["name", "homeworld"]
+}

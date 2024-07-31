@@ -1,0 +1,33 @@
+// Buscar personajes cuyo nombre empiece con "L" y que tengan más de 2
+// apariciones en películas, excluyendo aquellos que tengan "Green" como color de
+// ojos.
+
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "wildcard": {
+                        "name": "L*"
+                    }
+                }
+            ],
+            "must_not": [
+                {
+                    "term": {
+                        "eye_color":"green"
+                    }
+                }
+            ]
+        }
+    }
+    ,
+        "fields": [
+        "name",
+        "gender",
+        "skin_color",
+        "eye_color",
+        "films"
+    ],
+    "_source": false
+}

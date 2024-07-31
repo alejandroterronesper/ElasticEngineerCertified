@@ -1,0 +1,32 @@
+// Obtener personajes que tengan la especie "Wookiee" y que hayan nacido
+// después del año 200 BBY, excluyendo aquellos que tienen "Brown" como color
+// de ojos.
+
+{
+    "query": {
+        "bool": {
+            "must": [
+                {"term": {"species": "Wookiee"}}
+            ],
+            "must_not": [
+                {"term": {"eye_color": "brown"}}
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "birth_year":{"gte": 200}
+                    }
+                }
+            ]
+        }
+    }
+      ,
+        "fields": [
+        "name",
+        "species",
+        "eye_color",
+        "birth_year"
+    ],
+    "_source": false
+    
+}

@@ -1,0 +1,15 @@
+{
+    "description": "Pipeline para personajes humanos",
+    "processors": [
+        {
+            "drop": {
+                "if": "ctx.species != 'Human'" //se dropean valores no humanos
+            }
+        },
+        {
+            "remove": {
+                "field": "species" //se borra campo especies
+            }
+        }
+    ]
+}

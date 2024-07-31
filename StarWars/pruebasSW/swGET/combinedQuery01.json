@@ -1,0 +1,17 @@
+// sacar personajes nacidos entre el 167 y 19
+// que sean de Naboo
+{
+    "query": {
+        "bool": {
+            "must": {
+                "match_all": {}
+            }
+            ,"filter" : [
+                {"term": {"homeworld": "Tatooine"}},
+                {"range": {"birth_year": {"gte": 19, "lte": 167}}}
+            ]
+        }
+    },
+    "_source": false,
+    "fields" :["name", "homeworld", "birth_year"]
+}

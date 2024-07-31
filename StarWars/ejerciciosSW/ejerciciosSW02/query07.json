@@ -1,0 +1,20 @@
+// 7. Calcular la altura máxima y
+// mínima de los personajes por cada especie.
+
+{
+    "query": {
+        "match_all": {}
+    },
+    "aggs": {
+        "agg_species": {
+            "terms": {
+                "field": "species"
+            },
+            "aggs": {
+                "max_height": {"max": {"field" : "height"}},
+                "min_height": {"min": {"field" : "height"}}
+            }
+        }
+    },
+    "_source": false
+}
